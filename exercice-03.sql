@@ -16,13 +16,13 @@ AND create_date <= '2021-01-01'
 -- Listez les students :
 -- - dont l'email contient la chaîne de caractères `.fr`
 -- - OU dont la date de création est antérieure au 10/01/2021 inclus
-    `SELECT * FROM `student` WHERE email LIKE '%.fr' OR created_at >= '2021-01-10'; `
+    `SELECT * FROM `student` WHERE email LIKE '%.fr' OR created_at <= '2021-01-10'; `
 
 -- Exo 3.2
 -- Listez les students :
 -- - dont l'email contient la chaîne de caractères `.fr`
 -- - ET dont la date de création est antérieure au 10/01/2021 inclus
-    `SELECT * FROM `student` WHERE email LIKE '%.fr' AND created_at >= '2021-01-10'; `
+    `SELECT * FROM `student` WHERE email LIKE '%.fr' AND created_at <= '2021-01-10'; `
 
 -- Exo 3.3
 -- Listez les students :
@@ -34,13 +34,13 @@ AND create_date <= '2021-01-01'
 -- Listez les projets :
 -- - dont la description ne contient pas la chaîne de caractères `Dolores`
 -- - OU dont la date de début est postérieure au 01/07/2021 inclus
-    ` SELECT * FROM `project` WHERE description NOT LIKE 'Dolores' OR start_date <= '2021-07-01'; `
+    ` SELECT * FROM `project` WHERE description NOT LIKE 'Dolores' OR start_date >= '2021-07-01'; `
 
 -- Exo 3.5
 -- Listez les projets :
 -- - dont la description ne contient pas la chaîne de caractères `Dolores`
 -- - ET dont la date de début est postérieure au 01/07/2021 inclus
-    `SELECT * FROM `project` WHERE description NOT LIKE 'Dolores' AND start_date <= '2021-07-01';`
+    `SELECT * FROM `project` WHERE description NOT LIKE 'Dolores' AND start_date >= '2021-07-01';`
     
 -- Exo 3.6
 -- Listez les projets :
@@ -52,10 +52,10 @@ AND create_date <= '2021-01-01'
 -- Listez les students :
 -- - dont l'email contient la chaîne de caractères `.fr` ET la date de création est antérieure au 10/01/2021 inclus
 -- - OU ayant un projet
-    `SELECT * FROM `student` WHERE email LIKE '%.fr' AND created_at >= '2021-01-07' OR project_id = NULL; `
+    `SELECT * FROM `student` WHERE email LIKE '%.fr' AND created_at <= '2021-01-10' OR project_id IS NOT NULL; `
 
 -- Exo 3.8
 -- Listez les students :
 -- - dont l'email contient la chaîne de caractères `.fr` ET la date de création est antérieure au 10/01/2021 inclus
 -- - ET n'ayant pas de projet
-    `SELECT * FROM `student` WHERE email LIKE '%.fr' AND created_at >= '2021-01-07' AND project_id = NULL;`
+    `SELECT * FROM `student` WHERE email LIKE '%.fr' AND created_at <= '2021-01-10' AND project_id = NULL;`
