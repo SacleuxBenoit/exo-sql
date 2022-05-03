@@ -52,10 +52,10 @@ AND create_date <= '2021-01-01'
 -- Listez les students :
 -- - dont l'email contient la chaîne de caractères `.fr` ET la date de création est antérieure au 10/01/2021 inclus
 -- - OU ayant un projet
-    `SELECT * FROM `student` WHERE email LIKE '%.fr' AND created_at <= '2021-01-10' OR project_id IS NOT NULL; `
+    `SELECT * FROM `student` WHERE (email LIKE '%.fr' AND created_at <= '2021-01-10') OR project_id IS NOT NULL; `
 
 -- Exo 3.8
 -- Listez les students :
 -- - dont l'email contient la chaîne de caractères `.fr` ET la date de création est antérieure au 10/01/2021 inclus
 -- - ET n'ayant pas de projet
-    `SELECT * FROM `student` WHERE email LIKE '%.fr' AND created_at <= '2021-01-10' AND project_id = NULL;`
+    `SELECT * FROM `student` WHERE (email LIKE '%.fr' AND created_at <= '2021-01-10') AND project_id = NULL;`

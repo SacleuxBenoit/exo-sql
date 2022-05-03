@@ -74,7 +74,7 @@ WHERE id = 6
 -- Exo 2.9
 -- Supprimez un student :
 -- - student : Odette Thomas
-    `DELETE FROM `student` WHERE firstname = "Odette"; `
+    `DELETE FROM `student` WHERE id = 99`
 -- Exo 2.10
 
 -- Supprimez un projet et toutes les relations avec ses dépendances, c-à-d les relations avec des student et les relations avec des tags :

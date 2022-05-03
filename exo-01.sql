@@ -36,7 +36,7 @@ FROM tag;
 
 -- Exo 1.8
 -- Écrivez la requête qui permet de lister les students dont la date de création est antérieure au 10 janvier 2021 inclus
-  `SELECT * FROM `project` WHERE project_id >= 2021-07-01;`
+  `SELECT * FROM `project` WHERE project_id <= 2021-07-01;`
 
 -- Exo 1.9
 -- Écrivez la requête qui permet de lister les projets dont la description contient pas la chaîne de caractères `Dolores`
